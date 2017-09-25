@@ -1,0 +1,70 @@
+    1  cd В
+    2  cd D 
+    3  cd Git/practice
+    4  git clone https://github.com/novikmisha/practice.git
+    5  cd e:
+    6  ls
+    7  cd epam
+    8  git clone https://github.com/DaryaBeloded/epam.git
+    9  ls
+   10  cd epam
+   11  cd ../
+   12  cd ~/.ssh
+   13  git clone https://github.com/DaryaBeloded/epam.git
+   14  cd epam
+   15  echo init message >> README.md
+   16  git add README.md
+   17  git cat README.md
+   18  git cat -README.md
+   19  cat README.md
+   20  git commit -m "first commit in master"
+   21  echo blabla >> README.md
+   22  git add README.md
+   23  git commit -m "second commit in master"
+   24  echo hello world! >> file.txt
+   25  git add file.txt
+   26  git commit -m "third commit in master"
+   27  git branch dev
+   28  gir checkout dev
+   29  git checkout dev
+   30  echo changing file.txt from dev >> file.txt
+   31  git add file.txt
+   32  git commit -m "first commit in dev"
+   33  echo changing README.md from dev >> README.md
+   34  git add README.md
+   35  git commit -m "secon commit in dev"
+   36  git checkout master
+   37  git merge dev
+   38  git push --all
+   39  echo string for rebase with conflict >> README.md
+   40  git add README.md
+   41  git commit -m "commit from master for rebase with conflict"
+   42  git checkout dev
+   43  echo first commit in dev for rebase >> file.txt
+   44  git add file.txt
+   45  git commit -m "first commit in dev for rebase"
+   46  echo string for rebase >> README.md
+   47  git add README.md
+   48  git commit -m "another commit for rebase from dev"
+   49  git rebase master
+   50  vim README.md
+   51  git add README.md
+   52  git rebase --continue
+   53  git push --all
+   54  git checkout master
+   55  git merge dev
+   56  git checkout dev
+   57  echo string for cherry-pick >> file.txt
+   58  git add file.txt
+   59  git commit -m "first commit for cherry-pick"
+   60  echo string for revert >> README.md
+   61  git add README.md
+   62  git commit -m "commit for revert"
+   63  git log
+   64  git checkout master
+   65  git cherry-pick 163c288cd0439e0a76c1d972ec3a15da62d388a8
+   66  git checkout dev
+   67  git log
+   68  git revert ae95312d0f463b89538e7fa6110a8ab0cccd1b2c
+   69  git push --all
+   70  history > history.txt
