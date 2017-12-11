@@ -4,7 +4,11 @@ import by.bsu.selenium.page.CabinetPage;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+// This code will implement TestNG listeners
+@Listeners(by.bsu.selenium.action.Listener.class)
 
 public class CabinetPageActionTest {
     private CabinetPageAction cab;
