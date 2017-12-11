@@ -1,5 +1,7 @@
 package by.bsu.selenium.page;
 
+import by.bsu.selenium.constant.ElementCss;
+import by.bsu.selenium.constant.ElementId;
 import by.bsu.selenium.constant.LogMessage;
 import by.bsu.selenium.constant.PageURL;
 import org.apache.logging.log4j.LogManager;
@@ -11,13 +13,13 @@ import org.openqa.selenium.support.FindBy;
 public class FirstPlacePage extends AbstractPage {
     private final Logger LOGGER = LogManager.getLogger(MainPage.class);
 
-    @FindBy(xpath="//*[@id=\"page\"]/div[1]/div/div[2]/div[1]/div[3]/a/img")
+    @FindBy(css= ElementCss.LOGO)
     private WebElement logo;
 
-    @FindBy(xpath="//*[@id=\"button_start_vote\"]")
+    @FindBy(id= ElementId.VOICE)
     private WebElement voice;
 
-    @FindBy(xpath="/html/body/div")
+    @FindBy(css=ElementCss.VOICE_POPAP)
     private WebElement voicePopap;
 
     public FirstPlacePage(WebDriver webDriver) {

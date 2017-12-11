@@ -1,6 +1,5 @@
 package by.bsu.selenium.action;
 
-import by.bsu.selenium.page.CabinetPage;
 import by.bsu.selenium.page.FirstPlacePage;
 import by.bsu.selenium.page.MainPage;
 
@@ -12,8 +11,6 @@ public class MainPageAction extends AbstractAction {
         ticket.findTicket(to);
 //        String resultFrom = ticket.getFromInput().getAttribute("value");
         String resultTo = ticket.getToInput().getAttribute("value");
-//        from += ", Беларусь";
-        to += " Интернешнл, Австрия";
         return to.equalsIgnoreCase(resultTo);
     }
 

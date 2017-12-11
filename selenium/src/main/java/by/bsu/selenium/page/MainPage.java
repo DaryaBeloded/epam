@@ -7,61 +7,60 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class MainPage extends AbstractPage{
     private final Logger LOGGER = LogManager.getLogger(MainPage.class);
 
-    @FindBy(id="from_name")
+    @FindBy(id=ElementId.FROM_INPUT)
     private WebElement fromInput;
 
     @FindBy(name = ElementName.TO)
     private WebElement toInput;
 
-    @FindBy(css = "ul.ui-autocomplete>li>a")
+    @FindBy(css = ElementCss.TO_UL)
     private WebElement toUl;
 
-    @FindBy(id="departure_date")
+    @FindBy(id = ElementId.DATE_INPUT)
     private WebElement dateInput;
 
-    @FindBy(css = "table.ui-datepicker-calendar>tbody>tr>td>a")
+    @FindBy(css = ElementCss.DATE)
     private WebElement date;
 
     @FindBy(xpath = ElementXPath.BUTTON)
     private WebElement button;
 
-    @FindBy(css="div.js-cabinet>a")
+    @FindBy(css=ElementCss.MY_TICK)
     private WebElement mytick;
 
-    @FindBy(xpath="//*[@id=\"header\"]/div/div/div/div[3]/a[2]")
+    @FindBy(xpath=ElementXPath.MY_TICK1)
     private WebElement mytick1;
 
-    @FindBy(id="email_login")
+    @FindBy(id=ElementId.LOGIN)
     private WebElement login;
 
-    @FindBy(id="pass_login")
+    @FindBy(id=ElementId.PASS)
     private WebElement passw;
 
-    @FindBy(xpath="//*[@id=\"login_popup\"]/div[5]/form/div[2]/div/input")
+    @FindBy(xpath=ElementXPath.LOG_IN)
     private WebElement in;
 
-    @FindBy(css="label[data-uil='oneway']")
+    @FindBy(css=ElementCss.ONE_WAY)
     private WebElement oneway;
 
-    @FindBy(xpath = "//*[@id=\"current-lang\"]")
+    @FindBy(id = ElementId.CURR_LANG)
     private WebElement swapLang;
 
-    @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[4]/div/div/div[4]/a")
+    @FindBy(xpath = ElementXPath.SWAP_LANG_BT)
     private WebElement swapLangBt;
 
-    @FindBy(xpath = "//*[@id=\"country_chosen\"]")
+    @FindBy(id = ElementId.CHOSE_COUNTRY)
     private WebElement select;
 
-    @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[1]/h1/span")
+    @FindBy(css=ElementCss.H1)
     private WebElement h1;
 
-    @FindBy(xpath = "//*[@id=\"page\"]/main/div/div/aside/div[1]/div/ol/li[1]/a")
+    @FindBy(css=ElementCss.FIRST)
     private WebElement first;
 
     public MainPage(WebDriver webDriver) {

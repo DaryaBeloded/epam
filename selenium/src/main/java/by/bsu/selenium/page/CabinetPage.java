@@ -1,5 +1,7 @@
 package by.bsu.selenium.page;
 
+import by.bsu.selenium.constant.ElementCss;
+import by.bsu.selenium.constant.ElementXPath;
 import by.bsu.selenium.constant.LogMessage;
 import by.bsu.selenium.constant.PageURL;
 import org.apache.logging.log4j.LogManager;
@@ -12,7 +14,7 @@ import org.openqa.selenium.support.FindBy;
 public class CabinetPage extends AbstractPage{
     private final Logger LOGGER = LogManager.getLogger(MainPage.class);
 
-    @FindBy(xpath="//*[@id=\"page\"]/div[1]/div/div/strong")
+    @FindBy(css= ElementCss.USER_NAME)
     private WebElement usernameElement;
 
     public CabinetPage(WebDriver webDriver) {
@@ -26,7 +28,7 @@ public class CabinetPage extends AbstractPage{
     }
 
     public void signin() {
-        WebElement in = webDriver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[3]/a[2]"));
+        WebElement in = webDriver.findElement(By.xpath(ElementXPath.MY_TICK1));
         in.click();
     }
 

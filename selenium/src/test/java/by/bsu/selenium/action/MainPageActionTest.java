@@ -9,7 +9,7 @@ public class MainPageActionTest {
     private MainPageAction main;
 
 //    private final String FROM = "Минск, Беларусь";
-    private final String TO = "Вена";
+    private final String TO = "Вена Интернешнл, Австрия";
     private final String LG = "Австрия";
     private final String LOGIN = "dariabeloded@gmail.com";
     private final String PASS= "1234567890";
